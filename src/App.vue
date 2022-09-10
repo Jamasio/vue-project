@@ -1,9 +1,33 @@
 <template>
-  <h1>Hello World</h1>
+  <div class="container">
+    <Header title="Task Tracker"/>
+    <Tasks :tasks="Tasks" />
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import Tasks from './components/Tasks.vue';
 
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Tasks,
+  },
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  created() {
+    this.tasks = [
+      {
+
+      }
+    ]
+  }
+}
 </script>
 
 <style>
